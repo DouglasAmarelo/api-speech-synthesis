@@ -1,0 +1,39 @@
+// Responsive
+
+// Breakpoints
+$breakpoint-map: (
+	'extra-small': 30em, //480px
+	'small':       48em, //768px
+	'medium':      60em, //960px
+	'large':       70em, //1120px
+	'extra-large': 80em  //1280px
+);
+
+// Breakpoint
+/*
+	How to use:
+	1 - By passing the variable name from breakpoint
+	@include breakpoint(medium, 'max') {
+		border: 30px solid #333!important;
+	}
+
+	2- By passing the value in pixels, directly
+	@include breakpoint(500px, 'min') {
+		border: 30px solid #333!important;
+	}
+*/
+@mixin breakpoint($point, $min-max: "min") {
+	@if type-of($point) == string {
+		@each $breakpoint-name, $breakpoint-value in $breakpoint-map {
+			@if $point == $breakpoint-name {
+				@media (#{$min-max}-width: $breakpoint-value) {
+					@content;
+				}
+			}
+		}
+	} @else {
+		@media (#{$min-max}-width: $point) {
+			@content;
+		}
+	}
+}
