@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DouglasAmarelo/speech-synthesis-API.git"
+    "url": "git+https://github.com/DouglasAmarelo/api-speech-synthesis.git"
   },
   "keywords": [
     "Speech Synthesis API"
@@ -16,9 +16,9 @@
   "author": "@DouglasAmarelo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DouglasAmarelo/speech-synthesis-API/issues"
+    "url": "https://github.com/DouglasAmarelo/api-speech-synthesis/issues"
   },
-  "homepage": "https://github.com/DouglasAmarelo/speech-synthesis-API#readme",
+  "homepage": "https://github.com/DouglasAmarelo/api-speech-synthesis#readme",
   "babel": {
     "presets": [
       "es2015"
